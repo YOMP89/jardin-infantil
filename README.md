@@ -1,5 +1,7 @@
 # Proyecto: Landing Page Jardín Infantil "Colores y Sueños"
 
+![Proyecto](proyecto.jpg)
+
 ## Descripción General
 Landing page diseñada para un jardín infantil, enfocada en crear una experiencia visual atractiva y amigable para padres y niños. Combina colores vibrantes, animaciones suaves y una estructura intuitiva para destacar los servicios educativos y crear confianza en los usuarios.
 
