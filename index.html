@@ -1,0 +1,353 @@
+ 
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardín Infantil Colores y Sueños</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Fredoka One', cursive;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #2c3e50;
+        }
+
+        header {
+            background: #ff6b6b;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.5rem;
+            animation: bounceIn 1.5s ease;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4ecdc4;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 4rem 2rem;
+            background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+            border-radius: 20px;
+            margin: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-content h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #f7fff7;
+            max-width: 400px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            background: #45b7d1;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 1.5rem;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(69, 183, 209, 0.5);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .feature-item {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .gallery {
+            padding: 2rem;
+            background: #f7fff7;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 800px;
+            max-height: 600px;
+        }
+
+        .modal img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #4ecdc4;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                padding: 2rem;
+            }
+
+            .hero img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jardín Infantil Colores y Sueños</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>¡Donde los sueños comienzan a crecer!</h2>
+            <p>Un espacio seguro y lleno de alegría para el desarrollo integral de los más pequeños</p>
+            <button class="cta-button" onclick="document.getElementById('contacto').scrollIntoView()">Matricular Ahora</button>
+        </div>
+        <img src="https://static6.depositphotos.com/1018113/577/i/450/depositphotos_5775056-stock-photo-boys-and-girls-running.jpg" 
+             alt="Niños jugando" width="400" style="border-radius: 20px;">
+    </section>
+
+    <section class="features" id="servicios">
+        <div class="feature-item">
+            <img src="https://img.icons8.com/color/96/000000/brain.png" alt="Crecimiento cognitivo">
+            <h3>Estimulación Temprana</h3>
+            <p>Actividades lúdicas para el desarrollo cerebral</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://img.icons8.com/color/96/000000/classroom.png" alt="Aprendizaje">
+            <h3>Aprendizaje Creativo</h3>
+            <p>Talleres de arte, música y ciencia básica</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://img.icons8.com/?size=100&id=BPc8vlw14Jj8&format=png&color=000000" alt="Socialización">
+            <h3>Juego Colaborativo</h3>
+            <p>Actividades grupales para fomentar la socialización</p>
+        </div>
+    </section>
+
+    <section class="gallery" id="galeria">
+        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">Nuestro Mundo de Colores</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openModal('https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg')">
+                <img src="https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sala de clases">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://images.pexels.com/photos/5898461/pexels-photo-5898461.jpeg')">
+                <img src="https://images.pexels.com/photos/5898461/pexels-photo-5898461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Actividades al aire libre">
+            </div>
+            <div class="gallery-item" onclick="openModal('https://images.pexels.com/photos/3761515/pexels-photo-3761515.jpeg')">
+                <img src="https://images.pexels.com/photos/3761515/pexels-photo-3761515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Taller de arte">
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" style="padding: 2rem; background: #f7fff7;">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <h2 style="color: #2c3e50;">¡Contáctanos!</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Nombre" required style="width: 100%; padding: 1rem; margin: 1rem 0; border-radius: 10px; border: 2px solid #4ecdc4;">
+                <input type="email" placeholder="Correo" required style="width: 100%; padding: 1rem; margin: 1rem 0; border-radius: 10px; border: 2px solid #4ecdc4;">
+                <textarea placeholder="Mensaje" rows="4" required style="width: 100%; padding: 1rem; margin: 1rem 0; border-radius: 10px; border: 2px solid #4ecdc4;"></textarea>
+                <button type="submit" class="cta-button">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jardín Infantil Colores y Sueños</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <button class="close" onclick="closeModal()">&times;</button>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageUrl) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageUrl;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Mensaje enviado con éxito!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
+
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
